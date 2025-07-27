@@ -6,7 +6,12 @@ class Student{
         this.name=name;
     }
     public void setAge(int age){
-        this.age=age;
+        if (age<0){
+            System.out.println("Invalid age.");
+            return;
+        }else {
+            this.age=age;
+        }
     }
     public String getName(){
         return this.name;
@@ -20,7 +25,7 @@ public class Example01 {
     public static void main(String[] args) {
         Student student=new Student();
         student.setName("Geethma");
-        student.setAge(24);
+        student.setAge(-24);
         System.out.println(student.getName());
         System.out.println(student.getAge());
     }
