@@ -1,11 +1,16 @@
 import java.util.Random;
 
-class Alarm{
+class Observer{
+    public void update(int waterLevel){
+
+    }
+}
+class Alarm extends Observer{
     String alarmId;
     Alarm(String alarmId){
         this.alarmId=alarmId;
     }
-    public void triggerAlarm(int waterLevel){
+    public void update(int waterLevel){
         System.out.println("Alarm triggered: "+alarmId+(waterLevel>=50?" On":" Off")); //if-else
     }
 
@@ -42,7 +47,7 @@ class ControlPanel{
         this.waterLevel=waterLevel;
     }*/
     public void notifyObjects(){
-        alarm.triggerAlarm(waterLevel);
+        alarm.update(waterLevel);
         display.showWaterLevel(waterLevel);
         smsManager.sendMessage(waterLevel);
     }
