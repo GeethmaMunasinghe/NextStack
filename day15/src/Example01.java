@@ -16,14 +16,14 @@ class Alarm extends Observer{
 
 }
 
-class Display{
-    public void showWaterLevel(int waterLevel){
+class Display extends Observer{
+    public void update(int waterLevel){
         System.out.println("Water level is: "+waterLevel);
     }
 }
 
-class SMSManager{
-    public void sendMessage(int waterLevel){
+class SMSManager extends Observer{
+    public void update(int waterLevel){
         System.out.println("SMS sending "+waterLevel);
     }
 }
@@ -48,8 +48,8 @@ class ControlPanel{
     }*/
     public void notifyObjects(){
         alarm.update(waterLevel);
-        display.showWaterLevel(waterLevel);
-        smsManager.sendMessage(waterLevel);
+        display.update(waterLevel);
+        smsManager.update(waterLevel); //runtime decide
     }
     public void setDate(int waterLevel){
         if (this.waterLevel!=waterLevel){
