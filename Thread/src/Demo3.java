@@ -1,20 +1,4 @@
-class Parent3{
 
-}
-class SayHelloClass3 extends Parent3 implements Runnable{
-
-
-    @Override
-    public void run() {
-
-    }
-}
-class SayHiClass3 extends Parent3 implements Runnable{
-
-    public void run(){
-
-    }
-}
 public class Demo3 {
         public static void main(String[] args) {
             //Using inner class

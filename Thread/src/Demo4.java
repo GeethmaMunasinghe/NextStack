@@ -1,20 +1,3 @@
-class Parent4{
-
-}
-class SayHelloClass4 extends Parent4 implements Runnable{
-
-
-    @Override
-    public void run() {
-
-    }
-}
-class SayHiClass4 extends Parent4 implements Runnable{
-
-    public void run(){
-
-    }
-}
 
 public class Demo4 {
     public static void main(String[] args) {
