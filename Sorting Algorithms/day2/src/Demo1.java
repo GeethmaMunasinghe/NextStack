@@ -20,5 +20,6 @@ public class Demo1 {
             }
             System.out.println("----------------------------");
         }
+        System.out.println("Array is sorted...");
     }
 }
