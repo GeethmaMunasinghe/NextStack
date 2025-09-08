@@ -1,0 +1,139 @@
+mysql> DROP DATABASE IF EXISTS nextstack;
+Query OK, 0 rows affected, 1 warning (0.02 sec)
+
+mysql>
+mysql> CREATE DATABASE IF NOT EXISTS nextstack;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SHOW DATABASES;
++-------------------------+
+| Database                |
++-------------------------+
+| auctionappbidzone       |
+| db_saengineering        |
+| employeedetails         |
+| hostalmanagementsystem  |
+| information_schema      |
+| job_skill_portal        |
+| mydatabase              |
+| mysql                   |
+| mystoreddb              |
+| new_practicals_triggers |
+| nextstack               |
+| performance_schema      |
+| pos_system              |
+| possystem_geethma       |
+| practical07             |
+| stumarks                |
+| sys                     |
+| tutorial07              |
++-------------------------+
+18 rows in set (0.06 sec)
+
+mysql> USE nextstack;
+Database changed
+mysql>
+mysql>
+mysql> CREATE TABLE IF NOT EXISTS user(
+    -> user_name VARCHAR(15),
+    -> password VARCHAR(15)
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+
+mysql>
+mysql> SHOW TABLES;
++---------------------+
+| Tables_in_nextstack |
++---------------------+
+| user                |
++---------------------+
+1 row in set (0.01 sec)
+
+mysql> DESC user;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| user_name | varchar(15) | YES  |     | NULL    |       |
+| password  | varchar(15) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+mysql>
+mysql> INSERT INTO user VALUES('akila','1234'),('pathum','1111'),('amith','2222');
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql>
+mysql> SELECT * FROM user;
++-----------+----------+
+| user_name | password |
++-----------+----------+
+| akila     | 1234     |
+| pathum    | 1111     |
+| amith     | 2222     |
++-----------+----------+
+3 rows in set (0.00 sec)
+
+mysql> CREATE TABLE IF NOT EXISTS user(
+    -> nic VARCHAR(15) PRIMARY KEY,
+    -> user_name VARCHAR(15),
+    -> password VARCHAR(15)
+    -> );
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+mysql>
+mysql>
+mysql> DESCRIBE user;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| user_name | varchar(15) | YES  |     | NULL    |       |
+| password  | varchar(15) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> CREATE TABLE IF NOT EXISTS user(
+    -> nic VARCHAR(15) PRIMARY KEY,
+    -> user_name VARCHAR(15),
+    -> password VARCHAR(15)
+    -> );
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+mysql>
+mysql>
+mysql> DESCRIBE user;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| user_name | varchar(15) | YES  |     | NULL    |       |
+| password  | varchar(15) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+DROP TABLE IF EXISTS user;
+CREATE TABLE IF NOT EXISTS user(
+	nic VARCHAR(15) PRIMARY KEY,
+	name VARCHAR(45) NOT NULL, #cannot null
+	password VARCHAR(15)
+);
+DESC user;
+
+
+INSERT INTO user VALUES('98','gihan','1234');
+
+
+INSERT INTO user VALUES('2000','amith',null);
+
+DROP TABLE IF EXISTS user;
+CREATE TABLE IF NOT EXISTS user(
+	nic VARCHAR(15) PRIMARY KEY,
+	name VARCHAR(45) NOT NULL, 
+	email VARCHAR(45) UNIQUE,
+	password VARCHAR(15) 
+);
+DESC user;
+
+INSERT INTO user VALUES ('2000','janani','janani@email.com','1234');# ERROR
+
+
+INSERT INTO user VALUES ('2001','Hiruni','hiruni@email.com','5555');
