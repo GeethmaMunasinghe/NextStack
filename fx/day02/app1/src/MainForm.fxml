@@ -13,7 +13,7 @@
             <Font name="System Bold Italic" size="31.0" />
          </font>
       </Label>
-      <TextField fx:id="txtName" layoutX="187.0" layoutY="118.0" promptText="Name" />
+      <TextField fx:id="txtName" layoutX="187.0" layoutY="118.0" onKeyPressed="#onKeyPressed" promptText="Name" />
       <Button layoutX="212.0" layoutY="174.0" mnemonicParsing="false" onAction="#printNameOnAction" style="-fx-background-color: green;" text="Click for Print" textFill="#fcf9f9">
          <font>
             <Font name="System Bold" size="12.0" />
