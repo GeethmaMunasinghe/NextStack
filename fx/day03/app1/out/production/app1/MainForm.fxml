@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainFormController">
    <children>
-      <ComboBox fx:id="cmbLanguages" layoutX="209.0" layoutY="93.0" prefWidth="150.0" promptText="Select Lang" />
+      <ComboBox fx:id="cmbLanguages" layoutX="203.0" layoutY="59.0" prefWidth="150.0" promptText="Select Lang" />
+      <ImageView fitHeight="239.0" fitWidth="386.0" layoutX="107.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/f7e428776e7f5471c4d0052360de41f7.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
